@@ -7,22 +7,24 @@ Las entradas están organizadas por **tipo de problema empírico**, no por fecha
 ## Contenido (Table of contents)
 
 ### A) APIs y fuentes de datos
-- API del Banco Mundial (`{WDI}`)
-- API de Banxico (`{siebanxicor}`)
+- [API del Banco Mundial (`{WDI}`)](#api-del-banco-mundial-wdi)
+- [API de Banxico (`{siebanxicor}`)](#api-de-banxico)
 
 ### B) Manipulación de datos y visualización
-- Salario promedio del IMSS
-- Índice de Kaitz con datos de la OIT (`{Rilostat}`)
-- Rezago habitacional 2020 (CONAVI)
+- [Salario promedio del IMSS](#salario-promedio-del-imss)
+- [Índice de Kaitz con datos de la OIT (`{Rilostat}`)](#índice-de-kaitz-con-datos-de-la-oit-rilostat)
+- [Rezago habitacional 2020 (CONAVI)](#rezago-habitacional-2020-conavi)
 
 ### C) Series de tiempo y modelado
-- Desestacionalización de múltiples series en R
-- Tidy modeling con datos de la Reserva Federal (API FRED)
+- [Desestacionalización de múltiples series en R](#desestacionalización-de-múltiples-series-en-r)
+- [Tidy modeling con datos de la Reserva Federal (API FRED)](#tidy-modeling-con-datos-de-la-reserva-federal-api-fred)
 
 ### D) Macroeconomía
-- Tipo de cambio real de equilibrio (enfoque Rodrik) con PWT
-- Descomposición del deflactor del PIB (INEGI)
-- JST Macrohistory Database: inflación y tasas reales
+- [Tipo de cambio real de equilibrio (enfoque Rodrik) con PWT](#tipo-de-cambio-real-de-equilibrio-enfoque-rodrik-con-pwt)
+- [Descomposición del deflactor del PIB (INEGI)](#descomposición-del-deflactor-del-pib-inegi)
+- [JST Macrohistory Database: inflación y tasas reales](#jst-macrohistory-database-inflación-y-tasas-reales)
+
+---
 
 ## A) APIs y fuentes de datos
 
@@ -34,6 +36,8 @@ De forma complementaria, se utiliza `{naniar}` para identificar y visualizar val
 
 🔗 RPubs: <https://rpubs.com/ecodiegoale/api_wdi>
 
+---
+
 ### API de Banxico
 
 Uso de la API del Banco de México para acceder de forma programática a información monetaria y financiera oficial.  
@@ -42,6 +46,8 @@ El énfasis está en el acceso a la fuente y la construcción del indicador, má
 Como referencia conceptual, se remite al libro *Instrumentación de las operaciones monetarias, cambiarias y de administración de reservas* del Banco de México.  
 
 🔗 RPubs: <https://rpubs.com/ecodiegoale/api_banxico>
+
+---
 
 ## B) Manipulación de datos y visualización
 
@@ -53,6 +59,8 @@ De manera adicional, se ilustra la desagregación de estas variables por **secto
 
 🔗 RPubs: <https://rpubs.com/ecodiegoale/imss_dplyr>
 
+---
+
 ### Índice de Kaitz con datos de la OIT (`{Rilostat}`)
 
 Uso del paquete `{Rilostat}` como interfaz para acceder a **ILOSTAT**, el repositorio más amplio de estadísticas laborales a nivel mundial.  
@@ -60,6 +68,8 @@ El ejercicio muestra la descarga y organización de indicadores laborales para d
 A partir de esta información se calcula el **índice de Kaitz**, definido como la relación entre el salario mínimo y el salario medio.  
 
 🔗 RPubs: <https://rpubs.com/ecodiegoale/rilostats_kaitz>
+
+---
 
 ### Rezago habitacional 2020 (CONAVI)
 
@@ -69,16 +79,21 @@ El énfasis está en la **operacionalización transparente de criterios instituc
 
 🔗 RPubs: <https://rpubs.com/ecodiegoale/rezago2020>
 
+---
+
 ## C) Series de tiempo y modelado
 
 ### Desestacionalización de múltiples series en R
 
 Uso de la **API de INEGI** para obtener series económicas y aplicar un ajuste estacional masivo en R.  
 El ejercicio se centra en la desestacionalización simultánea de múltiples series mediante `{seasonal}`, interfaz de *X-13-ARIMA-SEATS*, destacando la automatización del proceso y el acceso a salidas estándar del método.  
-Tras el relanzamiento del Banco de Información Económica (BIE) de INEGI, el paquete `{inegiR}` **ya no opera**, por lo que el valor del ejercicio reside en la **reproducibilidad y conceptualización del cálculo**, más que en la herramienta específica.  
+
+⚠️ Tras el relanzamiento del Banco de Información Económica (BIE) de INEGI, el paquete `{inegiR}` **ya no opera**, por lo que el valor del ejercicio reside en la **reproducibilidad y conceptualización del cálculo**, más que en la herramienta específica.  
 
 🔗 RPubs: <https://rpubs.com/ecodiegoale/tidy_modeling_seas>  
 📂 Repo: <https://github.com/ecodiegoale/imss-tidy-seasonal>
+
+---
 
 ### Tidy modeling con datos de la Reserva Federal (API FRED)
 
@@ -88,6 +103,8 @@ De manera complementaria, se ilustra la desestacionalización simultánea de mú
 Finalmente, se presenta una visualización sintética de los datos procesados mediante **gráficos tipo waffle**.  
 
 🔗 RPubs: <https://rpubs.com/ecodiegoale/fred_purrr>
+
+---
 
 ## D) Macroeconomía
 
@@ -100,6 +117,8 @@ La estimación se realiza mediante un **modelo de panel con efectos fijos**, con
 🔗 RPubs (pt. 1): <https://rpubs.com/ecodiegoale/rodrik-balassasamuelson>  
 🔗 RPubs (pt. 2): <https://rpubs.com/ecodiegoale/rodrikpt2>
 
+---
+
 ### Descomposición del deflactor del PIB (INEGI)
 
 Uso de la **API de INEGI** para descomponer la **tasa de crecimiento del deflactor implícito del PIB de México** en **impuestos**, **excedente de operación (ganancias)** y **remuneraciones al trabajo**.  
@@ -107,6 +126,8 @@ El cálculo sigue la **metodología propuesta por la CONASAMI**, priorizando la 
 El valor del análisis reside en la **reproducibilidad y conceptualización del cálculo**, característico de un procedimiento estándar en macroeconomía aplicada.  
 
 🔗 RPubs: <https://rpubs.com/ecodiegoale/deflactor_API-inegiR>
+
+---
 
 ### JST Macrohistory Database: inflación y tasas reales
 
