@@ -32,7 +32,15 @@ Uso de la librería `{WDI}` como interfaz sencilla para acceder a la base de *Wo
 El énfasis está en la descarga conjunta de múltiples países y periodos en un solo paso, integrando los datos en flujos tidy para su análisis posterior.  
 De forma complementaria, se utiliza `{naniar}` para identificar y visualizar valores faltantes, resaltando las limitaciones de cobertura temporal y geográfica sin aplicar imputaciones ni tratamientos adicionales.  
 
-→ 🔗 RPubs: <https://rpubs.com/ecodiegoale/api_wdi>
+🔗 RPubs: <https://rpubs.com/ecodiegoale/api_wdi>
 
+### API de Banxico
+
+Uso de la API del Banco de México para acceder de forma programática a información monetaria y financiera oficial.  
+El ejercicio ilustra la integración de series mediante `{siebanxicor}`, junto con `{tidyverse}` y `{lubridate}`, para el cálculo de un **indicador básico de suficiencia de reservas internacionales**.  
+El énfasis está en el acceso a la fuente y la construcción del indicador, más que en una discusión exhaustiva de política monetaria.  
+Como referencia conceptual, se remite al libro *Instrumentación de las operaciones monetarias, cambiarias y de administración de reservas* del Banco de México.  
+
+🔗 RPubs: <https://rpubs.com/ecodiegoale/api_banxico>
 
 
